@@ -1,13 +1,514 @@
-body {
+html {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: arial;
+  height: 100%;
+  color: #999;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background:white url('../src//Assets/image/back.jpeg') no-repeat  ; */
+
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  flex-grow: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#reg,
+#log {
+  font-size: 2em;
+  margin: 0 0 30px 0;
+}
+
+input#mail,
+input#password,
+input#username,
+input#comfirmPassword {
+  padding: 15px;
+  width: 100%;
+  font-size: 1em;
+  border: 0;
+  border-radius: 5px;
+  color: #b3b3b3;
+  background-color: #333333;
+  margin-bottom: 15px;
+}
+
+#button1,
+#button2 {
+  background-color: #5a7884;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+#option {
+  color: #b3b3b3;
+  margin-top: 10px;
+  display: block;
+  font-size: 0.9em;
+}
+
+#login-body {
+  max-width: 410px;
+  margin: auto;
+  background-color: rgb(13 66 94);
+  color: white;
+  border-radius: 16px;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+/* a partire de la c la navbar */
+
+.HorizontalList {
+  list-style: none;
+
+}
+
+.nav-item.dropdown {
+  padding-left: 19px;
+}
+
+a#sneakers {
+  padding-left: 60px;
+}
+
+a#quisommenous {
+  padding-left: 28px;
+}
+
+.HorizontalList__Item {
+  display: inline-block;
+  margin: 6px 8px 6px 8px;
+  margin-right: 21px;
+  margin-left: 21px;
+}
+
+.Heading {
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #1c1b1b;
+  transition: color .2s ease-in-out;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+label.form-label {
+  display: flex;
+}
+
+
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height: auto;
+  width: 1479px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+}
+
+#main-nav {
+  transition: all 1s ease;
+}
+
+.navbar-brand {
+
+  font-family: 'Kaushan Script' !important;
+  transition: all 0.4s ease;
+}
+
+h1#Bienvenue-sneakers,
+#contacter,
+#bienvenue-streetwear,
+#Bienvenue-panier,
+#bienvenue-decouvrire,
+#Bienvenue-compte,
+#home-h1,
+#bienvenue-livraison,
+#bienvenue-precommande {
+  position: absolute;
+  top: 128px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+div#caroussel {
+  position: absolute;
+  top: 191px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#qui-somme-nous {
+  position: absolute;
+  top: 182px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#une-autre-question {
+  position: absolute;
+  top: 350px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#autheticité {
+  position: absolute;
+  top: 500px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#controle-produits {
+  position: absolute;
+  top: 280px;
+  right: 0;
+  left: 576px;
+  z-index: 1030;
+  text-align-last: left;
+}
+
+#DISPONIBILITÉ {
+  position: absolute;
+  top: 1000px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+
+#PRIX-RÉDUCTIONS {
+  position: absolute;
+  top: 1204px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#reductions {
+  position: absolute;
+  right: 0;
+  left: 576px;
+  top: 195px;
+  text-align-last: left;
+}
+
+p#p1-qui-somme-nous,
+p#p1-qui-somme-nous2,
+p#p1-qui-somme-nous3 {
+  text-align-last: left;
+  position: absolute;
+  left: 576px;
+}
+
+button.btn.btn-primary {
+  margin: auto;
+}
+
+#Navicon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 1000px;
+  z-index: 1030;
+}
+
+div#search {
+  position: fixed;
+  right: 20px;
+  top: 10px;
+
+}
+
+.item {
+  width: 310px;
+
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  margin: 10px;
+  padding: 10px;
+  margin-top: 60px;
+
+}
+div#sneakersContainer {
+  display: flex;
+}
+
+.item_left {
+  object-fit: contain;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+button.btn.btn-primary {
+  background: #343a3f;
+  height: auto;
+}
+
+.item_right {
+  margin-left: 20px;
+}
+
+button.btn.btn-btn.btn-danger {
+  width: auto;
+  position: relative;
+  top: 45px;
+  margin: auto;
+  right: 43px;
+  height: auto;
+}
+button#UpdateAccountButton {
+  width: auto;
+  position: relative;
+  /* margin: auto; */
+  left: 94px;
+}
+
+form#formAccount {
+  height: 474px;
+  margin: auto;
+  width: 22%;
+  top: 79px;
+  position: relative;
+  box-shadow: 1px 0px 20px 3px rgb(52 58 63);
+  /* border-block-color: initial; */
+  border-radius: 50px;
+  border: 3px solid #343a3f;
+}
+
+h2#h2-account {
+  font-family: 'Kaushan Script';
+  top: 45px;
+  position: relative;
+}
+
+.mb-3.input-group,
+label.form-label {
+  width: 90%;
+  margin: auto;
+}
+
+.mb-3.form-group {
+  width: 90%;
+  margin: auto;
+}
+
+div#Footer {
+  margin-right: auto;
+}
+
+section#contact {
+  position: absolute;
+  top: 128px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#main-nav {
+  transition: all 1s ease;
+}
+
+button.btn.btn-primary {
+  width: auto;
+}
+
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, .5);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+
+
+
+@media all and (max-width: 1030px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media all and (max-width: 830px) {
+  .container {
+    width: 580px;
+  }
+
+  header {
+    text-align: center;
+    padding-left: 20px;
+  }
+}
+
+
+
+
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-purple: #4b145b;
+  --clr-red-special: #b4345c;
+  --clr-grey-special: #eae6eb;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 920px;
+}
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.question {
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--clr-grey-special);
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+}
+
+.question h4 {
+  text-transform: none;
+  line-height: 1.5;
+}
+
+.question p {
+  color: var(--clr-grey-3);
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.question header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question header h4 {
+  margin-bottom: 0;
+}
+
+.btn {
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  background: var(--clr-grey-special);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--clr-red-special);
+  cursor: pointer;
+  margin-left: 1rem;
+  align-self: center;
+  min-width: 2rem;
+}
+
+.question-title {
+  cursor: pointer;
+}
+
+section.info {
+  position: absolute;
+  top: 167px;
+  display: inline-table;
+  left: 55px;
+  margin: auto;
+}
+
+h3#titrefaq {
+  position: absolute;
+  top: 95px;
+  /* display: inline-table; */
+  left: 55px;
+  /* margin: auto; */
 }
