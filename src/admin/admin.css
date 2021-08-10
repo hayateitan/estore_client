@@ -1,0 +1,152 @@
+/* a partire de la c que que le admin  */
+
+nav#navbaradmin {
+    position: fixed;
+    height: -webkit-fill-available;
+  }
+  
+  div#containeradmin {
+    position: relative;
+    top: -10px;
+  }
+  
+  span#titreadmin {
+    top: -190px;
+    position: relative;
+    margin: auto;
+    right: 29px;
+  }
+  
+  svg#icontitreadmin {
+    /* margin: auto; */
+    position: relative;
+    left: 5px;
+  }
+  
+  div#iconDashboard {
+    position: relative;
+    top: -170px;
+  }
+  
+  div#userIcon {
+    position: relative;
+    top: -160px;
+  }
+  
+  div#messagesIcon {
+    position: relative;
+    top: -140px;
+  }
+  
+  div#streetwearIcon {
+    position: relative;
+    top: -120px;
+  }
+  
+  div#streetwearIcon2 {
+    position: relative;
+    top: -100px;
+  }
+  
+  div#streetwearIcon3 {
+    position: relative;
+    top: -80px;
+  }
+  
+  div#streetwearIcon4 {
+    position: relative;
+    top: -60px;
+  }
+  
+  div#shoesIcon {
+    position: relative;
+    top: -40px;
+  }
+.itemdashboard {
+    width: 500px;
+    height: 500px;
+        left: 251px;
+    position: relative;
+    box-shadow: 0px 0px 6px 3px rgb(52 58 63);
+    border: solid rgba(0, 0, 0, 0.2) 1px;
+    margin: 10px;
+    padding: 10px;
+    margin-top: 60px;
+    border-radius: 20px;
+    top:58px;
+}
+
+  a.nav-link {
+  
+    display: table-cell;
+  }
+  button#deleteaacount {
+    top: auto;
+    position: inherit;
+}
+button#UpdateAccountButton {
+  margin: auto;
+  position: inherit;
+}
+div#inputadmin {
+  width: auto;
+}
+.mb-3.form-group {
+  width: auto;
+  margin: auto;
+}
+button#UpdateProduct {
+  width: -webkit-fill-available;
+}
+button.btn.btn-btn.btn-danger ,button.btn.btn-primary {
+  margin: auto;
+    height: auto;
+    width: -webkit-fill-available;
+    position: inherit;
+}
+.form-control-file, .form-control-range {
+    display: block;
+    border-radius: 5px;
+    width: auto;
+    border: 1px solid #ced4d9;
+    position: relative;
+    margin: auto;
+    /* alignment-baseline: mathematical; */
+    /* height: 33px; */
+}
+div#filedashboard {
+    position: relative;
+    top: 35px;
+}
+div#Dasboardinput {
+    width: 110%;
+    margin: auto;
+    position: relative;
+    right: 29px;
+    top:21px
+}
+.card {
+    height: -webkit-fill-available;
+}
+button#ajoutersneskers {
+    position: relative;
+    top: 30PX;
+}
+input#formFile {
+    width: 96%;
+}
+#texteadd {
+    position: absolute;
+    /* margin: auto; */
+    display: block;
+    font-family: 'Kaushan Script';
+    top: 40px;
+    font-size: -webkit-xxx-large;
+    /* right: -23px; */
+    left: 214px;
+}
+
+div#iconeadd {
+    top: 19px;
+    position: relative;
+}
