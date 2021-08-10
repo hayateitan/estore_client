@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Avatarr from './Avatarr';
-
+import server from '../Config';
 
 
 const Register = (props) => {
@@ -15,7 +15,7 @@ const [img, setimg] = useState()
         let passC = document.getElementById('comfirmPassword');
         let username = document.getElementById('username');
 
-        axios.post(`http://localhost:3001/register`, { email: mail.value, password: pass.value, comfirmpassword: passC.value, Username: username.value, image: img })
+        axios.post(`${server}/register`, { email: mail.value, password: pass.value, comfirmpassword: passC.value, Username: username.value, image: img })
 
             .then(res => {
 
@@ -29,7 +29,6 @@ const [img, setimg] = useState()
 
 
     const handleImageChanged = (img) => {
-        console.log(img);
         setimg(img);
     }
 
@@ -39,7 +38,7 @@ const [img, setimg] = useState()
         <section >
             <div id="login-body">
 
-                <h1 id='reg'>S'inscrire</h1>
+                <h1 id='reg'>Register</h1>
 
                 <form >
                     <Avatarr onImageChange={(img) => {handleImageChanged(img)}} />

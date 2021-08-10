@@ -1,7 +1,7 @@
 
 const Search = () => {
     return (
-       'salut'
+        'salut'
     )
 }
 

@@ -12,7 +12,7 @@ const Home = () => {
       history.push("/login");
    }
    let slides = [
-      <img src={shoe1} alt="1"  />,
+      <img src={shoe1} alt="1" />,
       <img src={shoe2} alt="2" />,
       <img src={shoe3} alt="3" />,
    ];

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 html {
   padding: 0;
   margin: 0;
@@ -12,12 +14,13 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* background:white url('../src//Assets/image/back.jpeg') no-repeat  ; */
+  background: white no-repeat;
 
   background-size: cover;
   background-position: center;
   min-height: 100%;
 }
+
 
 
 a {
@@ -259,64 +262,52 @@ div#search {
 
 }
 
-.item {
-  width: 310px;
 
-  border: solid rgba(0, 0, 0, 0.2) 1px;
-  margin: 10px;
-  padding: 10px;
-  margin-top: 60px;
-
-}
 div#sneakersContainer {
   display: flex;
 }
 
-.item_left {
-  object-fit: contain;
-  border: solid rgba(0, 0, 0, 0.1) 1px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
 
+span.MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangle.MuiBadge-colorPrimary {
+  top: 6px;
+  right: 13px;
 }
-
 
 button.btn.btn-primary {
   background: #343a3f;
   height: auto;
 }
 
-.item_right {
-  margin-left: 20px;
+
+button.btn.btn-btn.btn-danger, button.btn.btn-primary {
+    margin: auto;
+    height: auto;
+    width: -webkit-fill-available;
+    position: initial;
 }
 
-button.btn.btn-btn.btn-danger {
-  width: auto;
-  position: relative;
-  top: 45px;
-  margin: auto;
-  right: 43px;
-  height: auto;
-}
 button#UpdateAccountButton {
-  width: auto;
-  position: relative;
-  /* margin: auto; */
-  left: 94px;
+  width: -webkit-fill-available;
+  position: initial;
+}
+
+div#produitCard {
+  width: 310px;
+  box-shadow: 0px 0px 6px 1px rgb(52 58 63);
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  margin: 10px;
+  /* margin-top: 15px; */
+  border-radius: 20px;
 }
 
 form#formAccount {
-  height: 474px;
+  height: auto;
   margin: auto;
-  width: 22%;
+  width: 20rem;
   top: 79px;
   position: relative;
-  box-shadow: 1px 0px 20px 3px rgb(52 58 63);
-  /* border-block-color: initial; */
-  border-radius: 50px;
+  border-radius: 9px;
   border: 3px solid #343a3f;
 }
 
@@ -328,8 +319,18 @@ h2#h2-account {
 
 .mb-3.input-group,
 label.form-label {
-  width: 90%;
+  width: auto;
   margin: auto;
+}
+div#select {
+  margin: 4px;
+ 
+}
+
+h3#h3contacteznous {
+  font-family: 'Kaushan Script';
+  position: relative;
+  left: 19px;
 }
 
 .mb-3.form-group {
@@ -368,7 +369,40 @@ button.btn.btn-primary {
 }
 
 
+.accordion {
+  width: 79%;
+  margin: auto;
+  position: relative;
+  top: 70px;
+  position: relative;
+  margin-bottom: 20px;
+}
 
+form#NousContacter {
+  width: 994px;
+  position: relative;
+  margin: auto;
+}
+
+input#buttonNouscontacter {
+  height: auto;
+  width: 90%;
+  margin: auto;
+}
+
+h1#quisommenous {
+  font-family: 'Kaushan Script' !important;
+  top: 38px;
+  position: relative;
+}
+
+.accordion>.card>.card-header {
+  border-radius: 17px;
+}
+
+.accordion>.card:last-of-type {
+  border-radius: 17px;
+}
 
 @media all and (max-width: 1030px) {
   .container {
@@ -387,8 +421,46 @@ button.btn.btn-primary {
   }
 }
 
+button#buttonpanier {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  width: auto;
+}
+button#buttonpanierminus {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  width: auto;
+}
 
-
+#imgpanier{
+  height: fit-content;
+  width: 308px;
+  /* left: 30px; */
+  margin-inline-start: -72px;
+}
+div#produitCardpanier {
+  width: 310px;
+  box-shadow: 0px 0px 6px 1px rgb(52 58 63);
+  border: solid rgba(0, 0, 0, 0.2) 1px;
+  margin: 10px;
+  /* margin-top: 15px; */
+  flex-direction: row;
+  height: 200px;
+  width: 760px;
+  border-radius: 20px;
+}
+p#prixpanier {
+  font-size: xx-large;
+  color: green;
+  margin-right: 342px;
+}
+p#subtitlepanier {
+  margin-right: 313px;
+  font-size: revert;
+  /* color: black; */
+}
 
 
 :root {
@@ -512,3 +584,4 @@ h3#titrefaq {
   left: 55px;
   /* margin: auto; */
 }
+

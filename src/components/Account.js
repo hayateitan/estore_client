@@ -4,6 +4,8 @@ import axios from 'axios';
 import { Form, Button, InputGroup } from 'react-bootstrap';
 import Avatarr from './Avatarr';
 import Footericon from './Footericon'
+import server from '../Config';
+
 const Account = () => {
 
     let history = useHistory();
@@ -15,93 +17,86 @@ const Account = () => {
     const [mail, setMail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-    const [account, getAccount] = useState();
+    const [img, setimg] = useState();
+    const [isChange, setIsChange] = useState(false)
 
-    const getAllusers = () => {
-        axios.get(`http://localhost:3001/account`, {
+    const getAllusers = async () => {
+        const res = await axios.get(`${server}/account`, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
         })
-            .then(res => {
-                getAccount(res.data);
-                console.log(res.data)
-            })
 
+        const user = res.data[0]
 
+        console.log(user)
 
+        setMail(user.email)
+        setUsername(user.username)
+        setimg(user.img)
     }
 
     useEffect(() => {
         getAllusers();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    const handleImageChanged = (img) => {
+        setimg(img);
+        setIsChange(true)
+    }
 
-    const updateaccount = () => {
-
-    
-
-        axios.post(`http://localhost:3001/updateaccount`, { Username: username, email: mail, password: password }, {
+    const updateaccount = async () => {
+        const {data} = await axios.post(`${server}/updateaccount`, { Username: username, email: mail, password: password, image: img, isChange: isChange }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
         })
-            .then(res => {
-                if (res.data === 0) {
-                    return false
-                } 
-            })
+        if (data === 0) {
+            return false
+        }
     }
 
+    const deleteaccount = async () => {
 
-    const deleteaccount = () => {
-        
-
-
-        axios.post(`http://localhost:3001/deleteaccount`, { Username: username, email: mail, password: password }, {
+        const {data} = await axios.post(`${server}/deleteaccount`, { Username: username, email: mail, password: password }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
         })
-            .then(res => {
-                if (res.data === 0) {
-                    return false
-                } else {
-                    sessionStorage.removeItem('jwt')
-                    history.push("/Register")
-                }
-            })
+        if (data === 0) {
+            return false
+        } else {
+            sessionStorage.removeItem('jwt')
+            history.push("/Register")
+        }
     }
 
-
-    if (account != null) {
-
+    if (username !== null && username !== undefined && img !== null && img !== undefined) {
         return (
             <div id='container-account'>
 
-                <h2 id="h2-account">Bonjour bienvenue sur ton compte {account[0].username}</h2>
+                <h2 id="h2-account">Bonjour bienvenue sur ton compte {username}</h2>
 
-                <Form id="formAccount"  >
-                    <Avatarr />
-                    <Form.Label htmlFor="inlineFormInputGroup" visuallyHidden>
+                <Form id="formAccount">
+                    <Avatarr onImageChange={(img) => { handleImageChanged(img) }} img={img} />
+                    <Form.Label htmlFor="inlineFormInputGroup" visuallyhidden="true">
                         Username
                     </Form.Label>
                     <InputGroup className="mb-3">
                         <InputGroup.Text >@</InputGroup.Text>
-                        <Form.Control defaultValue={account[0].username} onChange={(e) => setUsername(e.target.value)} id="inlineFormInputGroup" placeholder="Username" />
+                        <Form.Control defaultValue={username} onChange={(e) => setUsername(e.target.value)} id="inlineFormInputGroup" placeholder="Username" />
                     </InputGroup>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control defaultValue={account[0].email} onChange={(e) => setMail(e.target.value)} type="email" placeholder="Enter email" />
+                        <Form.Control defaultValue={mail} onChange={(e) => setMail(e.target.value)} type="email" placeholder="Enter email" />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                     </Form.Group>
-
-
 
                     <Button variant="primary" id='UpdateAccountButton' onClick={updateaccount} type="button">
                         Modifier
@@ -112,13 +107,10 @@ const Account = () => {
                 </Form>
                 <Footericon ></Footericon>
             </div >
-
-
         )
     } else {
         return (' no data ')
     }
-
 }
 
 export default Account

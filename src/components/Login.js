@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import server from '../Config';
 
 const Login = (props) => {
 
@@ -20,7 +20,7 @@ const Login = (props) => {
         let mail = document.getElementById('mail');
         let pas = document.getElementById('password');
 
-        axios.post(`http://localhost:3001/login`, { email: mail.value, password: pas.value })
+        axios.post(`${server}/login`, { email: mail.value, password: pas.value })
             .then(res => {
                 console.log(res);
                 if (res.status === 200) {

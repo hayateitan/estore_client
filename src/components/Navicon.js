@@ -22,9 +22,9 @@ const Navicon = () => {
                 <li className="HorizontalList__Item ">
 
 
-                    
-                        <FontAwesomeIcon icon={faSearch} color='white' size="1x" />
-              
+
+                    <FontAwesomeIcon icon={faSearch} color='white' size="1x" />
+
                 </li>
 
                 <li className="HorizontalList__Item ">
@@ -43,3 +43,4 @@ const Navicon = () => {
 }
 
 export default Navicon
+
