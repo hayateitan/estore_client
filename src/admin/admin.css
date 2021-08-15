@@ -136,17 +136,61 @@ input#formFile {
     width: 96%;
 }
 #texteadd {
-    position: absolute;
-    /* margin: auto; */
-    display: block;
-    font-family: 'Kaushan Script';
-    top: 40px;
-    font-size: -webkit-xxx-large;
-    /* right: -23px; */
-    left: 214px;
+  position: inherit;
+  font-family: 'Kaushan Script';
+  font-size: -webkit-xxx-large;
+  top: 11px;
+
 }
 
 div#iconeadd {
-    top: 19px;
-    position: relative;
+  top: -75px;
+  position: relative;
+  left: 107px;
+}
+form#formAccount1 {
+  margin: auto;
+  width: 20rem;
+  margin: auto;
+  top: -7px;
+  position: relative;
+  
+}
+
+form#formulairecontacteznousadmin {
+  width:96%;
+  /* height: 500px; */
+  margin: auto;
+  top: 21px;
+  position: relative;
+}
+
+div#container-account {
+  border: 3px solid #bbbbbb;
+  width: 298px;
+  height: 285px;
+  margin: auto;
+  position: relative;
+  top: 126px;
+  margin-bottom: 38px;
+  border-radius: 25px;
+  box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
+}
+div#container-accountadmin2 {
+  border: 3px solid #bbbbbb;
+  width: 426px;
+  height: 659px;
+  margin: auto;
+  position: relative;
+  top: 126px;
+  /* margin-bottom: 38px; */
+  border-radius: 25px;
+  box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
+}
+form#formAccountadmin2 {
+  width: 78%;
+  /* height: 500px; */
+  margin: auto;
+  top: 21px;
+  position: relative;
 }

@@ -6,6 +6,8 @@ import server from '../Config';
 const Login = (props) => {
 
     const [ErrP, setErrP] = useState(1);
+    const [mail, setMail] = useState('');
+    const [pass, setPass] = useState('');
 
     function createMarkup() {
         if (ErrP !== 0) {
@@ -17,10 +19,9 @@ const Login = (props) => {
 
     }
     const doSubmit = () => {
-        let mail = document.getElementById('mail');
-        let pas = document.getElementById('password');
 
-        axios.post(`${server}/login`, { email: mail.value, password: pas.value })
+
+        axios.post(`${server}/login`, { email: mail, password: pass })
             .then(res => {
                 console.log(res);
                 if (res.status === 200) {
@@ -43,8 +44,8 @@ const Login = (props) => {
                 <h1 id='log'>S'identifier</h1>
 
                 <form >
-                    <input type="email" id="mail" placeholder="Votre adresse email ou username" required />
-                    <input type="password" id="password" placeholder="Mot de passe" required />
+                    <input type="email" id="mail" placeholder="Votre adresse email ou username" required onChange={(e) => setMail(e.target.value)} />
+                    <input type="password" id="password" placeholder="Mot de passe" required onChange={(e) => setPass(e.target.value)} />
                     <button type='button' id='button1' value='LOGIN' onClick={doSubmit} >S'identifier</button>
                     <div dangerouslySetInnerHTML={createMarkup(ErrP)} />
                     <label id="option"><input type="checkbox" name="auto" checked readOnly />Se souvenir de moi</label>

@@ -279,6 +279,11 @@ button.btn.btn-primary {
   height: auto;
 }
 
+span.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
+  width: 110px;
+  height: 110px;
+  background: white;
+}
 
 button.btn.btn-btn.btn-danger, button.btn.btn-primary {
     margin: auto;
@@ -307,8 +312,7 @@ form#formAccount {
   width: 20rem;
   top: 79px;
   position: relative;
-  border-radius: 9px;
-  border: 3px solid #343a3f;
+
 }
 
 h2#h2-account {
@@ -421,18 +425,7 @@ h1#quisommenous {
   }
 }
 
-button#buttonpanier {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-  width: auto;
-}
-button#buttonpanierminus {
-  color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
-  width: auto;
-}
+
 
 #imgpanier{
   height: fit-content;
@@ -508,9 +501,55 @@ p#subtitlepanier {
 }
 
 
+button#comfirme\ la\ commande {
+  width: auto;
+  top: 123px;
+  position: relative;
+}
 
 
-
+.AppWrapper {
+  width: 500px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+  top: 348px;
+}
+.FormGroup {
+  margin: 0 15px 20px;
+  padding: 0;
+  border-style: none;
+  background-color: #7795f8;
+  will-change: opacity, transform;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #829fff;
+  border-radius: 4px;
+}
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+.SubmitButton {
+  display: block;
+  font-size: 16px;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 40px 15px 0;
+  background-color: #343a40;
+  box-shadow: 0 6px 9px rgb(50 50 93 / 6%), 0 2px 5px rgb(0 0 0 / 8%), inset 0 1px 0 #343a40;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  will-change: transform, background-color, box-shadow;
+}
+.SubmitButton:active {
+  background-color: #d782d9;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #e298d8;
+  transform: scale(0.99);
+}
 
 @media screen and (min-width: 992px) {
   .container {
@@ -585,3 +624,155 @@ h3#titrefaq {
   /* margin: auto; */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside#summary {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  bottom: 0;
+  width: 450px;
+  overflow: auto;
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 2px 19px 4px rgb(0 0 0 / 4%);
+  transition: right 0.3s ease-in-out;
+}
+#summary .line-item.total .label, #summary .line-item.total .price {
+  color: #424770;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: inherit;
+}
+#summary .line-item .label {
+  flex: 1;
+  text-align: left;
+}
+#summary .line-item.subtotal {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  border-top: 1px solid #f3f3ff;
+}
+.line-item {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 30px 0 30px;
+}
+img.image {
+  display: block;
+  width: 115px;
+  height: fit-content;
+  margin-right: 15px;
+  background: #f6f9fc;
+  border-radius: 3px;
+}
+.label {
+  flex: 1;
+  text-align: left;
+}
+#summary .line-item .count, #summary .line-item .price {
+  font-size: 14px;
+  padding-left: 10px;
+  text-align: right;
+  line-height: 24px;
+}
+p.count {
+  color: #8898aa;
+}
+p.product {
+  color: #424770;
+}
+p.sku {
+  font-size: 14px;
+  color: #8898aa;
+}
+
+p.price {
+    color: #8ba4fe;
+    font-weight: bold;
+}
+.line-item.subtotal {
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-top: 10px;
+  border-top: 1px solid #f3f3ff;
+}
+button#buttonpanierminus {
+  color: #fff;
+  background-color: #3f52b5;
+  border-color: #3f52b5;
+  width: auto;
+  height: fit-content;
+  position: absolute;
+  right: 22px;
+  /* top: 117px; */
+  margin-top: 42px;
+  border-radius: 15px;
+}
+button#buttonpanier {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+  width: auto;
+  height: fit-content;
+  position: absolute;
+  right: 60px;
+  /* top: 117px; */
+  margin-top: 42px;
+  border-radius: 15px;
+}
+
+button#closebuttonpanier {
+  position: absolute;
+  right: 2px;
+  margin-top: -24px;
+}
+
+
+
+
+
+form#formulairecontacteznous {
+  width: 39%;
+  /* height: 500px; */
+  margin: auto;
+  top: 249px;
+  position: relative;
+}
+
+span#basic-addon1,span.input-group-text {
+  background: #343a40;
+}
+
+i#iconformcontacteznous,span.input-group-text {
+  color: white;
+}
+
+textarea#exampleForm\.ControlTextarea1 {
+  height: 149px;
+}
+
+
+div#container-account {
+  border: 3px solid #bbbbbb;
+  width: 549px;
+  height: 659px;
+  margin: auto;
+  position: relative;
+  top: 126px;
+  border-radius: 25px;
+  box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
+}

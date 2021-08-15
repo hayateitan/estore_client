@@ -54,14 +54,14 @@ const Products = ({ id }) => {
                                         <Card.Text >
                                             {p.prix}$
                                         </Card.Text>
-                                        <div id="select">
+                                        {/* <div id="select">
                                             <select className="custom-select ml-1" defaultValue="0">
                                                 <option value="0">Size</option>
                                                 <option value="1">41</option>
                                                 <option value="2">42</option>
                                                 <option value="3">43</option>
                                             </select>
-                                        </div>
+                                        </div> */}
                                         <Button variant="primary" onClick={(e) => handleAddToBasket(p)}>Ajouter au panier</Button>
                                     </Card.Body>
                                 </Card>
@@ -70,7 +70,7 @@ const Products = ({ id }) => {
                     )
                 )
             }
-            <Footericon></Footericon>
+            {/* <Footericon></Footericon> */}
         </Container>
     )
 }

@@ -5,6 +5,7 @@ import './admin.css'
 import User from './User';
 import ProductsAdmin from './ProductsAdmin';
 import AddProduct from './AddProduct';
+import Messages from './Messages';
 
 function Appadmin() {
   return (
@@ -23,6 +24,7 @@ function Appadmin() {
           <Route exact path="/Addstreetwear" component={() => <Container><AddProduct /></Container>} />
           <Route exact path="/AddKith" component={() => <Container><AddProduct /></Container>} />
           <Route exact path="/AddKaws" component={() => <Container><AddProduct /></Container>} />
+          <Route exact path="/message" component={() => <Container><Messages /></Container>} />
         </Switch>
         
       </Router>

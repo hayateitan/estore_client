@@ -47,7 +47,7 @@ const Account = () => {
     }
 
     const updateaccount = async () => {
-        const {data} = await axios.post(`${server}/updateaccount`, { Username: username, email: mail, password: password, image: img, isChange: isChange }, {
+        const { data } = await axios.post(`${server}/updateaccount`, { Username: username, email: mail, password: password, image: img, isChange: isChange }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
@@ -59,7 +59,7 @@ const Account = () => {
 
     const deleteaccount = async () => {
 
-        const {data} = await axios.post(`${server}/deleteaccount`, { Username: username, email: mail, password: password }, {
+        const { data } = await axios.post(`${server}/deleteaccount`, { Username: username, email: mail, password: password }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
@@ -84,13 +84,14 @@ const Account = () => {
                         Username
                     </Form.Label>
                     <InputGroup className="mb-3">
-                        <InputGroup.Text >@</InputGroup.Text>
+                       
                         <Form.Control defaultValue={username} onChange={(e) => setUsername(e.target.value)} id="inlineFormInputGroup" placeholder="Username" />
                     </InputGroup>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control defaultValue={mail} onChange={(e) => setMail(e.target.value)} type="email" placeholder="Enter email" />
+                        <Form.Control defaultValue={mail} onChange={(e) => setMail(e.target.value)} type="email" placeholder="Enter email" >
+                        </Form.Control>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -105,7 +106,7 @@ const Account = () => {
                         Suprime Mon compte
                     </Button>
                 </Form>
-                <Footericon ></Footericon>
+                {/* <Footericon ></Footericon> */}
             </div >
         )
     } else {

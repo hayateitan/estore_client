@@ -29,7 +29,9 @@ const Avatarr = (props) => {
     return (
         <div className="App">
             <input type="file" onChange={handleChange} id="upload" accept="image/*" style={{ display: "none" }} />
+            
             <label htmlFor="upload">
+            upload your file
                 <IconButton color="primary" aria-label="upload picture" component="span">
                     {img !== undefined || base64 !== undefined ?
                     <Avatar id="avatar"

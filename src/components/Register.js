@@ -8,14 +8,14 @@ import server from '../Config';
 const Register = (props) => {
 
 const [img, setimg] = useState()
-
+const [mail, setMail] = useState('');
+const [username, setUsername] = useState('');
+const [pass, setPass] = useState('');
+const [passc, setPassc] = useState('');
     const doSubmitNewUser = () => {
-        let mail = document.getElementById('mail');
-        let pass = document.getElementById('password');
-        let passC = document.getElementById('comfirmPassword');
-        let username = document.getElementById('username');
+      
 
-        axios.post(`${server}/register`, { email: mail.value, password: pass.value, comfirmpassword: passC.value, Username: username.value, image: img })
+        axios.post(`${server}/register`, { email: mail, password: pass.value, comfirmpassword: passc, Username: username, image: img })
 
             .then(res => {
 
@@ -41,12 +41,12 @@ const [img, setimg] = useState()
                 <h1 id='reg'>Register</h1>
 
                 <form >
-                    <Avatarr onImageChange={(img) => {handleImageChanged(img)}} />
+                <Avatarr onImageChange={(img) => { handleImageChanged(img) }} img={img} />
 
-                    <input type="username" id="username" placeholder=" Username" required />
-                    <input type="email" id="mail" placeholder=" Adresse mail " required />
-                    <input type="password" id="password" placeholder="Mot de passe" required />
-                    <input type="password" id="comfirmPassword" placeholder="Retapez votre mot de passe" required />
+                    <input type="username" id="username" placeholder=" Username" required onChange={(e) => setUsername(e.target.value)}/>
+                    <input type="email" id="mail" placeholder=" Adresse mail " required onChange={(e) => setMail(e.target.value)}/>
+                    <input type="password" id="password" placeholder="Mot de passe" required onChange={(e) => setPass(e.target.value)}/>
+                    <input type="password" id="comfirmPassword" placeholder="Retapez votre mot de passe" required onChange={(e) => setPassc(e.target.value)}/>
                     <button type="button" id='button2' onClick={doSubmitNewUser}>S'inscrire</button>
 
 
