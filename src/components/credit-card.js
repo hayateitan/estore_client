@@ -10,7 +10,6 @@ export function CheckoutForm({ price }) {
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
   const [disabled, setDisabled] = useState(true);
-  const [clientSecret, setClientSecret] = useState('');
   const stripe = useStripe();
   const elements = useElements();
 
@@ -21,16 +20,7 @@ export function CheckoutForm({ price }) {
   }
 
   const getSecret = async () => {
-    if (price > 0) {
-      const { data } = await axios.post(`${server}/pay`, { price: price }, {
-        headers: {
-          'Authorization': 'Bearer ' + token
-        }
-      })
-
-      console.log(data.clientSecret)
-      setClientSecret(data.clientSecret);
-    }
+    
   }
 
 
@@ -70,11 +60,29 @@ export function CheckoutForm({ price }) {
     ev.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement)
+
+    if (price > 0) {
+      const { data } = await axios.post(`${server}/pay`, { price: price }, {
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      })
+
+      const payload = await stripe.confirmCardPayment(data.clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement)
+        }
+      });
+
+      if (payload.error) {
+        setError(`Payment failed ${payload.error.message}`);
+        setProcessing(false);
+      } else {
+        setError(null);
+        setProcessing(false);
+        setSucceeded(true);
       }
-    });
+    }
 
     // if (result.paymentIntent.status === 'succeeded') {
     //   // Show a success message to your customer
@@ -84,14 +92,7 @@ export function CheckoutForm({ price }) {
     //   // post-payment actions.
     // }
 
-    if (payload.error) {
-      setError(`Payment failed ${payload.error.message}`);
-      setProcessing(false);
-    } else {
-      setError(null);
-      setProcessing(false);
-      setSucceeded(true);
-    }
+    
   };
 
   return (

@@ -38,12 +38,12 @@ const Products = ({ id }) => {
     }
 
     return (
-        <Container >
+        <div id="hdbgdvg" >
             {
                 products?.map(
                     p => (
-                        <Row key={p.id} className="justify-content-md-center">
-                            <Col lg={{ span: 1, offset: 4 }} >
+                       
+                            <Col id="productscol" >
                                 <Card id="produitCard" key={p.id} style={{ width: '18rem' }}>
                                     <Card.Img  variant="top" src={`${server}/uploads/` + p.img} />
                                     <Card.Body>
@@ -66,12 +66,12 @@ const Products = ({ id }) => {
                                     </Card.Body>
                                 </Card>
                             </Col>
-                        </Row>
+                        
                     )
                 )
             }
             {/* <Footericon></Footericon> */}
-        </Container>
+        </div>
     )
 }
 

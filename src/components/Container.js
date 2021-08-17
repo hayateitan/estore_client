@@ -5,7 +5,9 @@ export const Container = ({ children }) => {
 
     return (
         <div>
-            <Navbarr></Navbarr>
+            <Navbarr>
+                
+            </Navbarr>
             {children}
         </div>
     )

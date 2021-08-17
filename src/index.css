@@ -143,9 +143,6 @@ label.form-label {
   box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
 
-#main-nav {
-  transition: all 1s ease;
-}
 
 .navbar-brand {
 
@@ -444,6 +441,24 @@ div#produitCardpanier {
   width: 760px;
   border-radius: 20px;
 }
+
+
+
+div#hdbgdvg {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+div#productscol {
+  margin: 77px;
+  padding: 5px;
+}
+
+
+
+
 p#prixpanier {
   font-size: xx-large;
   color: green;

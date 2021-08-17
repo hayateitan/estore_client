@@ -18,7 +18,7 @@ const Navbarr = () => {
 
   return (
     <div>
-      <Navbar bg="dark" variant="dark" fixed="sticky" id="main-nav"   >
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="" id="main-nav"   >
         <Container>
           <Navbar.Brand href="home">HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,7 +36,7 @@ const Navbarr = () => {
               <Nav.Link id="Contacter" href="Contacter">Nous Contacter</Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+          </Container>
       
         < Nav.Item >
           <Nav.Link href="/Account"><FontAwesomeIcon icon={faUser} color='white' size="1x" /></Nav.Link>
@@ -52,6 +52,7 @@ const Navbarr = () => {
         <Nav.Item>
           <Nav.Link > <FontAwesomeIcon onClick={Logout} icon={faPowerOff} color='white' size="1x" /></Nav.Link>
         </Nav.Item>
+      
       </Navbar>
     </div>
   );

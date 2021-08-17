@@ -1,15 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Form, Button } from 'react-bootstrap';
 import Avatarr from '../components/Avatarr';
 import { GiSonicShoes } from "@react-icons/all-files/gi/GiSonicShoes";
 import { FaRegGrinTongueWink } from "@react-icons/all-files/fa/FaRegGrinTongueWink"
 import { FaAngellist } from "@react-icons/all-files/fa/FaAngellist"
-const AddProduct = () => {
+import server from "../Config"
+
+const AddProduct = ({ id }) => {
+
+
     const [img, setimg] = useState();
     const [isChange, setIsChange] = useState(false)
+    const [title, setTitle] = useState('');
+    const [subTitle, setsubTitle] = useState('');
+    const [prix, setPrix] = useState('');
+
+
+
+
+    const addProducts = async () => {
+        /*await axios.post(`${server}/addproduct?id=${id}`, { Title: title, SubTitle: subTitle, Prix: prix, image: img, Id: id }, {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })*/
+        //setimg(null)
+        setTitle('dfdsf');
+        setsubTitle('dsfsdf');
+        setPrix(0);
+
+    }
+
 
     let history = useHistory();
     let token = sessionStorage.getItem('jwt');
@@ -18,10 +41,15 @@ const AddProduct = () => {
     }
 
 
+
     const handleImageChanged = (img) => {
         setimg(img);
         setIsChange(true)
     }
+
+
+
+
 
 
     return (
@@ -32,31 +60,33 @@ const AddProduct = () => {
                     <Form.Label> <FaRegGrinTongueWink color='black' size={35} /><FaAngellist size={35} /><GiSonicShoes size={35} /></Form.Label>
 
                 </Form.Group>
+
+
                 <Avatarr id="avataraddproduct" onImageChange={(img) => { handleImageChanged(img) }} img={img} >
                     upload your file
                 </Avatarr>
-                
+
                 <Form.Group id='Dasboardinput' className="mb-3" >
                     <Form.Label>Title</Form.Label>
-                    <Form.Control type="title" />
+                    <Form.Control type="title" defaultValue={title} onChange={(e) => setTitle(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group id='Dasboardinput' className="mb-3" >
                     <Form.Label>subTitle</Form.Label>
-                    <Form.Control type="subtitle" />
+                    <Form.Control type="subtitle" defaultValue={subTitle} onChange={(e) => setsubTitle(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group id='Dasboardinput' className="mb-3" >
                     <Form.Label>prix</Form.Label>
-                    <Form.Control type="price" />
+                    <Form.Control type="price" defaultValue={prix} onChange={(e) => setPrix(e.target.value)} />
                 </Form.Group>
 
-                <Button variant="primary" id="ajoutersneskers" type="button">
+                <Button variant="primary" id="ajoutersneskers" type="button" onClick={addProducts}>
                     Ajouter le produit
                 </Button>
 
             </Form >
-        </div>
+        </div >
     )
 }
 
