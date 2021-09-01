@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { Card, Button, Col } from 'react-bootstrap';
 import Footericon from './Footericon';
 import server from '../Config';
 import { BasketContext } from '../App'

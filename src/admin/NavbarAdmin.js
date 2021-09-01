@@ -17,9 +17,7 @@ const NavbarAdmin = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="flex-column">
-                            <Nav.Item id="iconDashboard">
-                                <Nav.Link href="/dashboard"> <MdDashboard color='white' size={25} /> Dashboard </Nav.Link>
-                            </Nav.Item>
+                           
 
                             < Nav.Item id="userIcon">
                                 <Nav.Link href="/User"><FaUserAlt color='white' size={25} /> User Profile</Nav.Link>

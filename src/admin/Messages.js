@@ -4,8 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import server from '../Config';
 import { FormControl, InputGroup, Form, Container } from 'react-bootstrap';
+import CheckAdmin from './CheckAdmin';
 
 const Messages = () => {
+
+    CheckAdmin();
     let history = useHistory();
     let token = sessionStorage.getItem('jwt');
     if (token === null || token === undefined) {
@@ -35,12 +38,12 @@ const Messages = () => {
 
     return (
 
-        <div >
+        <div id="messageadmin" >
 
             {
                 messages?.map(
                     q => (
-                        <Container id='container-account'>
+                        <Container key={q.id} id='container-accountadminmessage'>
                             <Form key={q.id} id='formulairecontacteznousadmin'>
                                 <h3>message de {q.Nom}</h3>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

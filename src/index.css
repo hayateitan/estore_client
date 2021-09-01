@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 html {
@@ -8,18 +10,7 @@ html {
   color: #999;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: white no-repeat;
 
-  background-size: cover;
-  background-position: center;
-  min-height: 100%;
-}
 
 
 
@@ -62,7 +53,7 @@ input#comfirmPassword {
 
 #button1,
 #button2 {
-  background-color: #5a7884;
+  background-color: #495057;
   color: white;
   padding: 15px;
   width: 100%;
@@ -83,18 +74,29 @@ input#comfirmPassword {
 #login-body {
   max-width: 410px;
   margin: auto;
-  background-color: rgb(13 66 94);
+  background-color: #343a40;
   color: white;
   border-radius: 16px;
   padding: 50px;
-  margin-top: 50px;
+  top: 221px;
+  position: relative;
+}
+div#divpourbackgroundlogin {
+  height: 100vh;
+  background: #6c757d;
+  top: -79px;
 }
 
 /* a partire de la c la navbar */
 
-.HorizontalList {
-  list-style: none;
-
+.dropdown-menu.show {
+  background: #343a40;
+  border: #343a40;
+}
+a.dropdown-item {
+  color: #9a9da0;
+  position: relative;
+  
 }
 
 .nav-item.dropdown {
@@ -109,12 +111,8 @@ a#quisommenous {
   padding-left: 28px;
 }
 
-.HorizontalList__Item {
-  display: inline-block;
-  margin: 6px 8px 6px 8px;
-  margin-right: 21px;
-  margin-left: 21px;
-}
+
+
 
 .Heading {
   font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
@@ -182,21 +180,8 @@ div#caroussel {
   z-index: 1030;
 }
 
-#une-autre-question {
-  position: absolute;
-  top: 350px;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
 
-#autheticité {
-  position: absolute;
-  top: 500px;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
+
 
 #controle-produits {
   position: absolute;
@@ -207,30 +192,10 @@ div#caroussel {
   text-align-last: left;
 }
 
-#DISPONIBILITÉ {
-  position: absolute;
-  top: 1000px;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
 
 
-#PRIX-RÉDUCTIONS {
-  position: absolute;
-  top: 1204px;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
 
-#reductions {
-  position: absolute;
-  right: 0;
-  left: 576px;
-  top: 195px;
-  text-align-last: left;
-}
+
 
 p#p1-qui-somme-nous,
 p#p1-qui-somme-nous2,
@@ -240,9 +205,7 @@ p#p1-qui-somme-nous3 {
   left: 576px;
 }
 
-button.btn.btn-primary {
-  margin: auto;
-}
+
 
 #Navicon {
   position: absolute;
@@ -272,17 +235,20 @@ span.MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangle.MuiBadge-colorPrimary
 }
 
 button.btn.btn-primary {
+  border: #343a3f;
   background: #343a3f;
   height: auto;
+  width: auto;
+  margin: auto;
 }
 
 span.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
   width: 110px;
   height: 110px;
-  background: white;
+  background: #495058;
 }
 
-button.btn.btn-btn.btn-danger, button.btn.btn-primary {
+button.btn.btn-btn.btn-danger{
     margin: auto;
     height: auto;
     width: -webkit-fill-available;
@@ -342,6 +308,11 @@ h3#h3contacteznous {
 div#Footer {
   margin-right: auto;
 }
+h1#contacteznous {
+  font-family: 'Kaushan Script';
+  position: relative;
+  top: -42px;
+}
 
 section#contact {
   position: absolute;
@@ -355,9 +326,7 @@ section#contact {
   transition: all 1s ease;
 }
 
-button.btn.btn-primary {
-  width: auto;
-}
+
 
 
 .navbar-dark .navbar-toggler {
@@ -405,22 +374,9 @@ h1#quisommenous {
   border-radius: 17px;
 }
 
-@media all and (max-width: 1030px) {
-  .container {
-    width: 800px;
-  }
-}
 
-@media all and (max-width: 830px) {
-  .container {
-    width: 580px;
-  }
 
-  header {
-    text-align: center;
-    padding-left: 20px;
-  }
-}
+ 
 
 
 
@@ -471,49 +427,6 @@ p#subtitlepanier {
 }
 
 
-:root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-purple: #4b145b;
-  --clr-red-special: #b4345c;
-  --clr-grey-special: #eae6eb;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 920px;
-}
 
 
 button#comfirme\ la\ commande {
@@ -529,6 +442,33 @@ button#comfirme\ la\ commande {
   margin: auto;
   position: relative;
   top: 348px;
+}
+input#fullName {
+  width: 470px;
+  position: relative;
+  left: 15px;
+  top: -31px;
+  color: aliceblue;
+  height: 41px;
+  background: #7795f8;
+}
+input#fullAdresse {
+  width: 470px;
+  position: relative;
+  left: 15px;
+  top: -21px;
+  color: aliceblue;
+  height: 41px;
+  background: #7795f8;
+}
+input#numberPhone {
+  width: 470px;
+  position: relative;
+  left: 15px;
+  top: -11px;
+  color: aliceblue;
+  height: 41px;
+  background: #7795f8;
 }
 .FormGroup {
   margin: 0 15px 20px;
@@ -566,12 +506,7 @@ button#comfirme\ la\ commande {
   transform: scale(0.99);
 }
 
-@media screen and (min-width: 992px) {
-  .container {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-  }
-}
+
 
 .question {
   padding: 1rem 1.5rem;
@@ -783,11 +718,257 @@ textarea#exampleForm\.ControlTextarea1 {
 
 div#container-account {
   border: 3px solid #bbbbbb;
-  width: 549px;
-  height: 659px;
+  width: fit-content;
+  height: 615px;
   margin: auto;
   position: relative;
   top: 126px;
   border-radius: 25px;
   box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
+}
+
+nav#main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+div#quisommenous {
+  margin-top: 78px;
+}
+
+
+@media all and (max-device-width: 480px){
+
+  div#hdbgdvg {
+    position: relative;
+    top: 78px;
+}
+
+  div#quisommenous {
+    margin-top: 78px;
+}
+
+
+  div#productscol {
+    margin: -4px;
+  
+}
+
+  a.dropdown-item {
+    position: relative;
+    left: 35px;
+  }
+  aside#summary {
+    position: absolute;
+    top: 349px;
+    width: auto;
+}
+.AppWrapper {
+  width: 375px;
+  position: relative;
+  top: 168px;
+  
+}
+.navbar-collapse {
+ 
+  align-items: center;
+  text-align: -webkit-center;
+  margin-right: 172px;
+  position: relative;
+}
+a#sneakers {
+  position: relative;
+  margin-right: 80px;
+}
+
+
+div#productscol {
+  margin: 33px;
+}
+
+div#container-account {
+  position: inherit;
+  width: min-content;
+  margin: auto;
+  margin-top: 141px;
+}
+
+div#caroussel {
+  position: absolute;
+  top: 277px;
+}
+
+form#formulairecontacteznous {
+  width: 356px;
+  position: relative;
+  top: 255px;
+}
+
+}
+
+
+@media (min-device-width: 739px)  and (max-device-width: 1416px){
+
+  div#quisommenous {
+    margin-top: 78px;
+}
+
+  div#productscol {
+    margin: 20px;
+    padding: 5px;
+}
+
+
+  div#caroussel {
+    position: relative;
+    top: 36px;
+}
+  .navbar-collapse {
+    text-align: -webkit-center;
+    margin-right: 550px;
+    position: relative;
+  }
+
+  a#sneakers {
+    position: relative;
+    margin-right: 80px;
+  }
+
+  div#container-account {
+    position: relative;
+    width: max-content;
+    margin: auto;
+    top: 139px;
+  }
+
+  form#formAccount {
+    width: 35em;
+} 
+
+  form#formulairecontacteznous {
+    width: 700px;
+    position: relative;
+    top: 122px;
+  }
+
+  aside#summary {
+    position: absolute;
+    top: 349px;
+    width: -webkit-fill-available;
+}
+.AppWrapper {
+  width: 375px;
+  position: relative;
+  top: 149px;
+  
+}
+
+}
+
+@media (min-device-width: 480px)  and (max-device-width: 739px){
+
+  a#sneakers {
+    position: relative;
+    left: -39px;
+}
+
+  .nav-item.dropdown {
+    position: relative;
+    left: 38px;
+}
+  .me-auto.navbar-nav {
+    position: relative;
+    margin-right: 297px;
+}
+  div#hdbgdvg {
+    top: 51px;
+    position: absolute;
+}
+
+  div#container-account {
+    position: inherit;
+    width: 401px;
+    margin: auto;
+    margin-top: 141px;
+}
+
+  div#quisommenous {
+    margin-top: 78px;
+}
+
+
+  a.dropdown-item {
+    position: relative;
+    left: 35px;
+  }
+  form#formulairecontacteznous {
+    width: 462px;
+    position: relative;
+    top: 122px;
+  }
+
+  aside#summary {
+    position: absolute;
+    top: 349px;
+    width: -webkit-fill-available;
+}
+.AppWrapper {
+  width: 375px;
+  position: relative;
+  top: 136px;
+  
+}
+
+
+}
+
+
+
+
+@media (min-device-width: 991px)  and (max-device-width: 1364px){
+
+  .me-auto.navbar-nav {
+    position: absolute;
+    width: max-content;
+    position: absolute;
+    left: -23px;
+}
+
+a#quisommenous {
+  position: relative;
+  right: 65px;
+}
+
+a#Contacter {
+  position: relative;
+  right: 37px;
+}
+
+}
+
+@media (min-device-width: 739px)  and (max-device-width: 990px){
+  a.dropdown-item {
+    position: relative;
+    left: 35px;
+  }
+ 
+}
+
+
+
+@media (min-device-width: 631px)  and (max-device-width: 739px){
+  div#productscol {
+    margin: -4px;
+  }
+ 
+}
+
+@media (min-device-width: 961px)  and (max-device-width: 1071px){
+  div#productscol {
+    margin: 0px;
+  }
+ 
 }

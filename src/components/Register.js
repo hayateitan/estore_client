@@ -12,10 +12,19 @@ const [mail, setMail] = useState('');
 const [username, setUsername] = useState('');
 const [pass, setPass] = useState('');
 const [passc, setPassc] = useState('');
-    const doSubmitNewUser = () => {
-      
 
-        axios.post(`${server}/register`, { email: mail, password: pass.value, comfirmpassword: passc, Username: username, image: img })
+    const doSubmitNewUser = () => {
+
+        
+        let reg = RegExp('[A-Z][a-z]{7,}')
+        if (!reg.test(pass)){
+            alert("reg pas bon")
+          
+        }
+       
+   
+
+        axios.post(`${server}/register`, { email: mail, password: pass, comfirmpassword: passc, Username: username, image: img })
 
             .then(res => {
 
@@ -35,7 +44,8 @@ const [passc, setPassc] = useState('');
 
     return (
 
-        <section >
+        <section >  
+            <div id="divpourbackgroundlogin">
             <div id="login-body">
 
                 <h1 id='reg'>Register</h1>
@@ -55,6 +65,7 @@ const [passc, setPassc] = useState('');
                 <p className="grey">Vous avez deja un compte ? <Link to="/Login">Connectez-vous</Link>.</p>
 
 
+            </div>
             </div>
         </section>
 

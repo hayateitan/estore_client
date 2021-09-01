@@ -5,9 +5,10 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Form, Button } from 'react-bootstrap';
 import server from '../Config'
 import produce from "immer"
+import CheckAdmin from './CheckAdmin';
 
 const ProductsAdmin = ({id}) => {
-
+    CheckAdmin();
     let history = useHistory();
     let token = sessionStorage.getItem('jwt');
     if (token === null || token === undefined) {
@@ -75,7 +76,7 @@ const ProductsAdmin = ({id}) => {
     }
 
     return (
-        <Container >
+        <Container id="admincontainer" >
             {
                 products?.map(
                     p => (

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useHistory } from "react-router-dom";
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { Form, Button, InputGroup } from 'react-bootstrap';
-
+import server from '../Config';
 const User = (props) => {
 
     let history = useHistory();
@@ -18,7 +18,7 @@ const User = (props) => {
     //const [img, setimg] = useState();
 
     const getAllUser = () => {
-        axios.get(`http://localhost:3001/Useradmin`, {
+        axios.get(`${server}/Useradmin`, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
@@ -35,7 +35,7 @@ const User = (props) => {
     }, []);
 
     const updateaccount = (id) => {
-        axios.post(`http://localhost:3001/updateaccount`, { Username: username, email: mail, updateaccountId: id }, {
+        axios.post(`${server}/updateaccount`, { Username: username, email: mail, updateaccountId: id }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
@@ -50,7 +50,7 @@ const User = (props) => {
     const deleteaccount = (id) => {
 
         console.log(id + 'salut')
-        axios.post(`http://localhost:3001/deleteaccount`, { accountId: id }, {
+        axios.post(`${server}/deleteaccount`, { accountId: id }, {
             headers: {
                 'Authorization': 'Bearer ' + token
             }
@@ -63,7 +63,7 @@ const User = (props) => {
     }
 
     return (
-        <Container >
+        <Container id="admincontainer">
             {
                 User?.map(
                     p => (

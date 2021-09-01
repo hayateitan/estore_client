@@ -1,15 +1,10 @@
-/* a partire de la c que que le admin  */
 
 nav#navbaradmin {
     position: fixed;
     height: -webkit-fill-available;
   }
   
-  div#containeradmin {
-    position: relative;
-    top: -10px;
-  }
-  
+
   span#titreadmin {
     top: -190px;
     position: relative;
@@ -18,7 +13,7 @@ nav#navbaradmin {
   }
   
   svg#icontitreadmin {
-    /* margin: auto; */
+
     position: relative;
     left: 5px;
   }
@@ -62,19 +57,7 @@ nav#navbaradmin {
     position: relative;
     top: -40px;
   }
-.itemdashboard {
-    width: 500px;
-    height: 500px;
-        left: 251px;
-    position: relative;
-    box-shadow: 0px 0px 6px 3px rgb(52 58 63);
-    border: solid rgba(0, 0, 0, 0.2) 1px;
-    margin: 10px;
-    padding: 10px;
-    margin-top: 60px;
-    border-radius: 20px;
-    top:58px;
-}
+
 
   a.nav-link {
   
@@ -88,15 +71,10 @@ button#UpdateAccountButton {
   margin: auto;
   position: inherit;
 }
-div#inputadmin {
-  width: auto;
-}
+
 .mb-3.form-group {
   width: auto;
   margin: auto;
-}
-button#UpdateProduct {
-  width: -webkit-fill-available;
 }
 button.btn.btn-btn.btn-danger ,button.btn.btn-primary {
   margin: auto;
@@ -104,37 +82,14 @@ button.btn.btn-btn.btn-danger ,button.btn.btn-primary {
     width: -webkit-fill-available;
     position: inherit;
 }
-.form-control-file, .form-control-range {
-    display: block;
-    border-radius: 5px;
-    width: auto;
-    border: 1px solid #ced4d9;
-    position: relative;
-    margin: auto;
-    /* alignment-baseline: mathematical; */
-    /* height: 33px; */
-}
-div#filedashboard {
-    position: relative;
-    top: 35px;
-}
-div#Dasboardinput {
-    width: 110%;
-    margin: auto;
-    position: relative;
-    right: 29px;
-    top:21px
-}
-.card {
-    height: -webkit-fill-available;
-}
-button#ajoutersneskers {
-    position: relative;
-    top: 30PX;
-}
-input#formFile {
-    width: 96%;
-}
+
+
+
+
+
+
+
+
 #texteadd {
   position: inherit;
   font-family: 'Kaushan Script';
@@ -148,49 +103,60 @@ div#iconeadd {
   position: relative;
   left: 107px;
 }
-form#formAccount1 {
-  margin: auto;
-  width: 20rem;
-  margin: auto;
-  top: -7px;
-  position: relative;
-  
-}
 
-form#formulairecontacteznousadmin {
-  width:96%;
-  /* height: 500px; */
-  margin: auto;
-  top: 21px;
-  position: relative;
-}
 
-div#container-account {
+
+
+div#container-accountadminmessage {
   border: 3px solid #bbbbbb;
   width: 298px;
   height: 285px;
-  margin: auto;
+  margin: 76px;
   position: relative;
-  top: 126px;
-  margin-bottom: 38px;
+  left: 455px;
   border-radius: 25px;
   box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
 }
+
+
+
+
+div#messageadmin {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+div#admincontainer {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.justify-content-md-center.row {
+  margin: 26px;
+  position: relative;
+  right: -118px;
+}
+
 div#container-accountadmin2 {
   border: 3px solid #bbbbbb;
-  width: 426px;
-  height: 659px;
+  width: 419px;
+  height: 615px;
   margin: auto;
   position: relative;
-  top: 126px;
-  /* margin-bottom: 38px; */
+  top: 26px;
   border-radius: 25px;
   box-shadow: rgb(33 31 32 / 40%) -5px 5px, rgb(37 34 36 / 30%) -10px 10px, rgb(14 14 14 / 20%) -15px 15px, rgb(33 31 32 / 10%) -20px 20px, rgb(21 19 20 / 5%) -25px 25px;
 }
+
 form#formAccountadmin2 {
-  width: 78%;
-  /* height: 500px; */
+  height: auto;
   margin: auto;
-  top: 21px;
+  width: 20rem;
+  top: -5px;
   position: relative;
 }

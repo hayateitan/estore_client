@@ -44,7 +44,9 @@ console.log(nom.value)
 
     return (
         <div>
+           
             <Form id='formulairecontacteznous'>
+            <h1 id="contacteznous"> Contactez-Nous</h1>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
 
                     <InputGroup className="mb-3">
@@ -75,7 +77,7 @@ console.log(nom.value)
                 </Button>
             </Form>
 
-            <Footericon></Footericon>
+           
         </div>
 
 

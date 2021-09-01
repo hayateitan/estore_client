@@ -21,10 +21,10 @@ const Home = () => {
    return (
       <div id="caroussel">
 
-         <Carousel slides={slides} />
+         <Carousel id="gvsdfc" slides={slides} />
 
 
-         <Footericon></Footericon>
+      
       </div >
    )
 }
